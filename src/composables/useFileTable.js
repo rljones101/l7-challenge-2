@@ -1,4 +1,4 @@
-import { ref, unref, watch } from 'vue'
+import { ref, watch } from 'vue'
 
 export function useFileTable() {
   const tableHeaders = ref([])
@@ -9,9 +9,7 @@ export function useFileTable() {
   // Call to format and set the table headers
   const setHeaders = (headers) => {
     tableHeaders.value = []
-    headers.forEach((header, index) => {
-      const prefix = 'column-'
-
+    headers.forEach((header) => {
       tableHeaders.value.push({
         key: header,
         dataKey: header,
@@ -33,7 +31,6 @@ export function useFileTable() {
         const header = headers[index]
         newDataItem[header.dataKey] = item
       })
-      console.log({ newDataItem })
       tableData.value.push(newDataItem)
     })
   }

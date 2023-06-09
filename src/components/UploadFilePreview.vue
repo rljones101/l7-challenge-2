@@ -25,7 +25,7 @@
 //   and browse through datasets uploaded by other users. No user authentication/user management is required here…
 //   assume anonymous users and public datasets.
 
-import { ref, reactive, watch, getCurrentInstance } from 'vue'
+import { ref, getCurrentInstance } from 'vue'
 import AppLineChart from '@/components/graphs/AppLineChart.vue'
 import AppBarChart from '@/components/graphs/AppBarChart.vue'
 import { useFileTable } from '@/composables/useFileTable'
